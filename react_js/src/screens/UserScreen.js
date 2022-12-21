@@ -40,7 +40,7 @@ export default function UserScreen() {
 
                 {/* calling the AddNewTopic react child component */}
                 <div>
-                    <AddNewTopic _id={_id} updateTopicData={updateTopicData} />
+                    <AddNewTopic _id={_id} getTopicData={getTopicData} />
                 </div>
 
                 {/* calling the ShowContent react child component */}
