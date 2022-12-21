@@ -55,7 +55,7 @@ export default function AddNewTopic(props) {
 
             const { data } = await axios.post("/api/topic/save", topicData)
             if (data) {
-                props.updateTopicData(data.insertedTopicData.value.data)
+                props.getTopicData()
                 setOpen(false)
                 setTopicData({ ...topicData, name: "", desc: "", isDescriptionCategorised: false, descArray: [] })
             }
