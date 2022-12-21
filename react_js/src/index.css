@@ -1,0 +1,226 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+/* Header css */
+.header {
+  background-color: #2c2c32;
+  font-size: 2rem;
+  padding: 1.5rem;
+  text-align: center;
+  color: white;
+}
+
+
+/* HomeScreen css */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.center {
+  align-items: center;
+}
+
+.mainDiv {
+  margin-top: 4rem;
+  padding: 2rem;
+  border: 1px solid grey;
+  max-width: 30rem;
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  width: 100%;
+}
+
+label {
+  margin-bottom: 7px;
+  margin-top: 1rem;
+}
+
+.input {
+  padding: 10px;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.input:focus {
+  border: 1px solid #4285F4;
+  box-shadow: 0px 0px 5px 0px #4285F4;
+}
+
+.button {
+  padding: 10px;
+  background-color: #2c2c32;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 1.5rem;
+  cursor: pointer;
+}
+
+
+
+/* userScreen css */
+.userMainDiv {
+  margin-top: 2rem;
+  padding: 1rem;
+  border: 1px solid grey;
+  max-width: 40rem;
+  width: 100%;
+}
+
+
+
+/* addnewtopic css  */
+
+.popupModel {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+
+  z-index: 1;
+
+  background-color: whitesmoke;
+  box-shadow: 0px 0px 10px 0px grey;
+  border-radius: 10px;
+
+  padding: 1rem;
+}
+
+
+
+.close {
+  position: absolute;
+  right: 32px;
+  top: 10px;
+
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.close:hover {
+  opacity: 1;
+}
+
+.close:before,
+.close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+}
+
+.close:before {
+  transform: rotate(45deg);
+}
+
+.close:after {
+  transform: rotate(-45deg);
+}
+
+
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.popup.border {
+  border: 1px solid black;
+  margin: 2px;
+  padding: 2px;
+  border-radius: 3px;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 250px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  margin-bottom: 5px;
+
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: -100px;
+  /* margin-left: -80px; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  /* margin-left: -10px; */
+  border-width: 10px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
